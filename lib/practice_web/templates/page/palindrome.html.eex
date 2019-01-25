@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="column">
+    <p><%= link "<-go back", to: "/" %></p>
+    <h2>Palindrome results</h2>
+
+    <p>Is <%= @string %> palindrome? <%= @y %></p>
+  </div>
+</div>
+
+
+
+
