@@ -12,11 +12,18 @@ defmodule Practice.Factor do
     end
   end
 
+  def factor(x, a, acc) when x > 1 do
+      factor_prime(x, acc) 
+      IO.puts("b#{x},#{a},#{inspect(acc)}")
+  end
+
+  def factor_prime(x, acc) do       #it's adding avlue to list but not returning acc
+    acc ++ [x]                      #make the sub function that adds the x value
+    IO.puts("f#{x},#{inspect(acc)}")
+  end
+ 
   def factor(x, a, acc) when a == 1 do
-    if x > 1 do
-      acc ++ [x]
-    end
-    IO.puts("b#{x},#{a},#{inspect(acc)}")
+    IO.puts("c#{x},#{a},#{inspect(acc)}")
     acc
   end
 
