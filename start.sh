@@ -18,7 +18,7 @@ _build/prod/rel/practice/bin/practice stop || true
 
 echo "Starting app..."
 
-_build/prod/rel/practice/bin/practice start 
+_build/prod/rel/practice/bin/practice foreground 
 
 # TODO: Change "foreground" to "Start"
 
