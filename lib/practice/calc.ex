@@ -39,34 +39,38 @@ defmodule Practice.Calc do
 
 
   def multidiv([{:num, num1}, {:op, "*"}, {:num, num2} | rest]) do
-    [{:num, (num1 * num2)}] ++ multidiv(rest)
+    #[{:num, (num1 * num2)}] ++ multidiv(rest)
+    multidiv([{:num, (num1 * num2)}] ++ rest)
   end
 
   def multidiv([{:num, num1}, {:op, "/"}, {:num, num2} | rest]) do
-    [{:num, (num1 / num2)}] ++ multidiv(rest)
+    #[{:num, (num1 / num2)}] ++ multidiv(rest)
+    multidiv([{:num, (num1 / num2)}] ++ rest)
   end
-
+  
   def multidiv([first | rest]) do       #check if there is remained numbers
     [first] ++ multidiv(rest)
   end
-
+  
   def multidiv([]) do                    #check if the array is empty
     []
   end
 
 
   def sumsubtract([{:num, num1}, {:op, "+"}, {:num, num2} | rest]) do
-    [{:num, (num1 + num2)}] ++ multidiv(rest)
+    #[{:num, (num1 + num2)}] ++ multidiv(rest)
+    sumsubtract([{:num, (num1 + num2)}] ++ rest)
   end
 
   def sumsubtract([{:num, num1}, {:op, "-"}, {:num, num2} | rest]) do
-    [{:num, (num1 - num2)}] ++ multidiv(rest)
+    #[{:num, (num1 - num2)}] ++ multidiv(rest)    
+    sumsubtract([{:num, (num1 - num2)}] ++ rest)
   end
-
+  
   def sumsubtract([first | rest]) do
     [first] ++ multidiv(rest)
   end
-
+  
   def sumsubtract([]) do
     []
   end
