@@ -3,6 +3,6 @@
 		<p><%= link "<-go back", to: "/" %></p>
 		<h2>Double Results</h2>
 
-		<p>Prime factors of <%= @x %> are </p>
+                <p>Prime factors of <%= @x %> are <%= inspect(@y) %></p>
 	</div>
 </div>
