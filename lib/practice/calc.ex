@@ -68,7 +68,7 @@ defmodule Practice.Calc do
   end
   
   def sumsubtract([first | rest]) do
-    [first] ++ multidiv(rest)
+    [first] ++ sumsubtract(rest)
   end
   
   def sumsubtract([]) do
